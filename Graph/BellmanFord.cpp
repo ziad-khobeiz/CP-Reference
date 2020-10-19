@@ -11,7 +11,7 @@ struct Edge{
 
 bool BellmanFord(int src, vector<Edge> & edges, vector<int> & d, int nodes) {
 
-    // returns true if there's no negative cycle and the vector d sent by reference has the answer
+    // returns true if there's no negative cycle and the vector d (sent by reference) will have the shortest path from the source to node v stored in d[v].
     // returns false if there's a negative cycle
     // don't forget to assign OO bigger than any possible path
 
