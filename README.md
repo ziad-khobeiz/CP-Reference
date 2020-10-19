@@ -1,2 +1,2 @@
 # CP-Reference
-Competitive Programming Reference for EBZ team.
+Competitive Programming Reference for "Minimum Spamming Three" team from Ain Shams University.
