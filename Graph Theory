@@ -1,6 +1,6 @@
 We will add the following in graph theory:
 
-1- Bellman Ford (with negative cylce detection)
+1- Bellman Ford (with negative cylce detection) + detecting all the nodes that exist in at least one negative cycle whether it is reachable from the source or not.
 2- Floyd Warshall algorithm
 3- Dijkstra O(n^2) and O(n + m * log(n)) (min priority queue)
 5- Topological sorting
