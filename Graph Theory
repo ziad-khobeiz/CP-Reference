@@ -1,0 +1,16 @@
+We will add the following in graph theory:
+
+1- Bellman Ford (with negative cylce detection)
+2- Floyd Warshall algorithm
+3- Dijkstra O(n^2) and O(n + m * log(n)) (min priority queue)
+5- Topological sorting
+6- LCA
+7- Tarjan
+8- Bridges and articulation points
+9- Prim's algorithm O(n^2) and O(m log(n))
+10- Kruskal's algorithm (with path compression + rank optimization)
+11- Small to large trick
+
+Flows:
+1- Bipartite maximum matching / minimum vertex cover with dfs O(n*m)
+2- Max Flow / Min Cut
