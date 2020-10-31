@@ -1,3 +1,8 @@
+// The code calculates "Bipartite graph maximum matching" in O(n*m)
+// In any bipartite graph, the number of edges in a maximum matching equals the number of vertices in a minimum vertex cover (set of vertices that includes at least one endpoint of every edge of the graph).
+// Total no. of nodes = Minimum vertix cover + Maximum Independent set (a set of vertices in a graph, no two of which are adjacent).
+
+
 #include <bits/stdc++.h>
 #define ll long long
 using namespace std;
