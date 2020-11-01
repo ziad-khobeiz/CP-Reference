@@ -1,4 +1,5 @@
 // Source: https://cp-algorithms.com/graph/dinic.html
+// Time Complexity: O(V*V*E)
 
 struct FlowEdge {
     int v, u;
