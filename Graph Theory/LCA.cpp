@@ -1,3 +1,7 @@
+// Time complexity: 
+// Build -> O(n * log(n)) 
+// Get -> O(log(n))
+
 int n, q, level[N], sp[N][lg];
 vector<int> adj[N];
 
