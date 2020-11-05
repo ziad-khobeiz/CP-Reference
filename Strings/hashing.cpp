@@ -1,11 +1,11 @@
-int pw[N], pw2[N], inv[N], inv2[N], pref[N], pref2[N], prf[N], prf2[N];
- 
+int pw[N], pw2[N], inv[N], inv2[N], pref[N], pref2[N];
+
 int add(int a, int b){
     return (a + b) % mod;
 }
  
 int mul(int a, int b){
-    return 1ll * a * b % mod;
+    return 1LL * a * b % mod;
 }
  
 int fp(int b, int p){
@@ -15,7 +15,8 @@ int fp(int b, int p){
     if(p & 1) ret = mul(ret, b);
     return ret;
 }
- 
+
+// O(n + log(n)) Preprocessing
 void pre(){
     pw[0] = pw2[0] = inv[0] = inv2[0] = 1;
     int mul_inv = fp(b, mod - 2), mul_inv2 = fp(b2, mod - 2);
