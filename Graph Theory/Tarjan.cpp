@@ -3,7 +3,7 @@ vector<int> adj[N];
 int dfsn[N], low[N], cost[N], timer, in_stack[N];
 stack<int> st;
 
-// to detect all the cycles in a directed graph
+// to detect all the components (cycles) in a directed graph
 void tarjan(int node){
     dfsn[node] = low[node] = ++timer;
     in_stack[node] = 1;
