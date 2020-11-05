@@ -1,7 +1,7 @@
 struct Edge{
 
     int from, to;
-    double cost;
+    ll cost;
 
     // The operator is reversed to sort the priority_queue non-increasing
     bool operator < (const Edge &e) const {
