@@ -29,22 +29,11 @@ void init(int n){
 }
 
 int main(){
-    int n;
-    while(cin >> n, n){
+    int tt;
+    cin >> tt;
+    while(tt--){
+        // Input
         init(n);
-        cin.ignore();
-        while(1){
-            string s;
-            getline(cin, s);
-            stringstream ss(s);
-            int node, x;
-            ss >> node;
-            if(node == 0) break;
-            while(ss >> x){
-                adj[node].push_back(x);
-                adj[x].push_back(node);
-            }
-        }
         for(int i = 1; i <= n; i++){
             if(dfsn[i] == 0) dfs(i, 0);
         }
