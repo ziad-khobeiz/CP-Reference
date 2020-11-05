@@ -5,30 +5,23 @@ hashing h[N], pw[N];
 set<pair<ll, ll> > hashes;
 
 hashing add(const hashing & a, const hashing & b) {
-
     return (a + b) % MOD;
-
 }
 
 hashing mul(const hashing & a, const hashing & b) {
-
     return (a * b) % MOD;
-
 }
 
 void init() {
-
     hashes.clear();
-
 }
 
 int main() {
-
+    
     pw[0] = {1, 1};
     for (int i = 1; i < N; ++i) {
         pw[i] = mul(pw[i - 1], B);
     }
-    
     int tt;
     cin >> tt;
     while (tt--) {
@@ -37,7 +30,6 @@ int main() {
         string s;
         cin >> n >> k >> s;
         init();
-        
         h[0] = {0, 0};
         for (int i = 1; i <= n; ++i) {
             h[i] = add(h[i - 1], mul(hashing(s[i - 1] - 'a' + 1, 2), pw[i - 1]));
