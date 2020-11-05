@@ -9,7 +9,7 @@ long long dist[N];
 vector<edge> adj[N];
 
 void Dijkstra(int s) {
-    //                 <dist,node
+    //                 <dist,node>
     priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> pq;
     fill(dist, dist + N, OO);
     pq.push({s, 0});
@@ -22,6 +22,7 @@ void Dijkstra(int s) {
         for (auto &c : adj[node]) {
             if (dist[c.to] > dist[node] + c.cost) {
                 dist[c.to] = dist[node] + c.cost;
+                // par[c.to] = node;
                 pq.push({dist[c.to], c.to});
             }
         }
