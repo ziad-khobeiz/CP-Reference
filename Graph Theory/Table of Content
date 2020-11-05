@@ -19,3 +19,4 @@ Flows:
 1- Bipartite maximum matching / minimum vertex cover with dfs O(n*m) (DONE)
 2- Dinic - Max Flow / Min Cut (DONE)
 3- Min Cost Max Flow
+4- Hungarian algorithm
