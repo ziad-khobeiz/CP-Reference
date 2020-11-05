@@ -13,15 +13,10 @@ struct Edge{
 bool vis[N];
 
 ll Prim() {
-
     priority_queue<Edge> q;
-
     memset(vis, 0, sizeof vis);
-
     q.push({-1, 0, 0});
-
     ll ret = 0;
-
     while (!q.empty()) {
         auto e = q.top();
         q.pop();
@@ -34,7 +29,5 @@ ll Prim() {
             }
         }
     }
-
     return ret;
-
 }
