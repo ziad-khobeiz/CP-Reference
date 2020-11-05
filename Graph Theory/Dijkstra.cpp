@@ -1,5 +1,4 @@
-
-// Dijkstra 
+// Dijkstra O(m * log)
 
 const int N = 1e5 + 5;
 struct edge {
