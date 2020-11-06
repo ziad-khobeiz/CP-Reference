@@ -1,3 +1,5 @@
+// Big primes = {1e9 + 21, 1e9 + 33, 1e9 + 87, 1e9 + 93, 1e9 + 97}
+
 typedef valarray<ll> hashing;
 hashing MOD = {(ll)1e9 + 7, (ll)1e9 + 9};
 hashing B = {(ll)31, (ll)53};
