@@ -1,7 +1,5 @@
 struct Edge{
-
     int from, to, cost;
-
 };
 
 /// Bellman Ford Algorithm:
@@ -17,29 +15,17 @@ bool BellmanFord(int src, vector<Edge> & edges, vector<int> & d, int nodes) {
 
     d.assign(nodes, OO);
     d[src] = 0;
-
     for (int i = 1; i <= nodes; ++i) {
-
         bool relaxed = false;
-
         for(auto & e : edges) {
-
             if(d[e.from] < OO) {
-
                 if(d[e.to] > d[e.from] + e.cost) {
-
                     d[e.to] = max(-OO, d[e.from] + e.cost);
                     relaxed = true;
-
                 }
-
             }
-
         }
-
         if(!relaxed) return true;
         if(i == nodes) return false;
-
     }
-
 }
