@@ -1,4 +1,7 @@
 // Source: https://cp-algorithms.com/graph/bellman_ford.html
+// The worst case of this algorithm is equal to the O(nm) of the Bellman-Ford, 
+// but in practice it works much faster and some people claim that it works even in O(m) on average. 
+// However be careful, because this algorithm is deterministic and it is easy to create counterexamples that make the algorithm run in O(nm).
 
 const int INF = 1000000000;
 vector<vector<pair<int, int>>> adj;
