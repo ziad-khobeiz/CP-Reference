@@ -31,7 +31,6 @@ bool connect(int a, int b) {
     rnk[b] += (rnk[a] == rnk[b]);
     --comps;
     return true;
-
 }
 
 vector<Edge> Kruskal() {
@@ -48,5 +47,4 @@ vector<Edge> Kruskal() {
     }
 
     return ret;
-
 }
