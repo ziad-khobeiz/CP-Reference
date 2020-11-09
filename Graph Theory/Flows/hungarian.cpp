@@ -1,3 +1,5 @@
+// Source: https://codeforces.com/blog/entry/84149
+
 template<typename T>
 T hungarian(const vector<vector<T>>& cost) {
     const T INF = numeric_limits<T>::max();
