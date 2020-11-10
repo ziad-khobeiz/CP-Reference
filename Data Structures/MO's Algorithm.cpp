@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 
-int n, qq, arr[N], sz = 1000; // sz  is the log 
+int n, qq, arr[N], sz = 1000; // sz  is the size of the bucket 
 int co[N],ans = 0, ansq[N];
 int cul = 1, cur = 1;
 
