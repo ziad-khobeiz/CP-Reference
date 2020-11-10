@@ -1,8 +1,8 @@
-1- Trie
-2- Segment Tree
-3- Implicit Segment Tree
-4- Segment Tree with lazy propagation
-5- Sparse table 
-+ O(1) min/max query
-6- Sqrt Decomposition
-7- MO's Algorithm
+1- Trie ()
+2- Segment Tree ()
+3- Implicit Segment Tree ()
+4- Segment Tree with lazy propagation ()
+5- Sparse table (DONE)
++ O(1) min/max query (DONE)
+6- Sqrt Decomposition (DONE)
+7- MO's Algorithm (DONE)
