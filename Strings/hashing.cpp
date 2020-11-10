@@ -49,6 +49,8 @@ void build_hash(string &s){
     }
 }
 
+// Source: https://cp-algorithms.com/string/string-hashing.html
+
 int count_unique_substrings(string const& s) {
     int n = s.size();
 
