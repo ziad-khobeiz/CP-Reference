@@ -21,7 +21,7 @@ for (int j = K; j >= 0; j--) {
     }
 }
 
-// Range Min Query from L to R
+// Range Min Query from L to R in O(1)
 
 int log[MAXN+1];
 log[1] = 0;
