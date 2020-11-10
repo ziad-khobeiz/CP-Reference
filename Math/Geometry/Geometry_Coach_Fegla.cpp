@@ -1,5 +1,3 @@
-%%prettify
-{{{
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
@@ -33,6 +31,8 @@ typedef complex<long double> point;
 enum STATE {
 	IN, OUT, BOUNDRY
 };
+
+// Intersect Lines
 
 bool intersect(const point &a, const point &b, const point &p, const point &q,
               point &ret) {
@@ -359,23 +359,6 @@ void convexPolygonIntersect(const vector<point>& p, const vector<point>& q,
 	}
 }
 
-void voronoi(const vector<point> &pnts, const vector<point>& rect, vector<
-		vector<point> > &res) {
-	res.clear();
-	for (int i = 0; i < sz(pnts); i++) {
-		res.push_back(rect);
-		for (int j = 0; j < sz(pnts); j++) {
-			if (j == i)
-				continue;
-			point p = perp(vec(pnts[i],pnts[j]));
-			point m = mid(pnts[i],pnts[j]);
-			vector<point> temp;
-			polygonCut(res.back(), m, m + p, temp);
-			res.back() = temp;
-		}
-	}
-}
-
 STATE pointInPolygon(const vector<point>& p, const point &pnt) {
 	point p2 = pnt + point(1, 0);
 	int cnt = 0;
@@ -445,4 +428,3 @@ void convexHull(vector<point> pnts, vector<point> &convex) {
 			convex.push_back(pnts[i]);
 	}
 }
-}}}
