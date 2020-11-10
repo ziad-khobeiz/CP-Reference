@@ -1,3 +1,7 @@
+typedef tuple<ll, ll, ll> line;
+typedef pair<ll, ll> point;
+typedef pair<point, point> segment;
+
 void canonize(line &t){
     ll g = __gcd(get<0>(t), get<1>(t));
     g = abs(__gcd(g, get<2>(t)));
