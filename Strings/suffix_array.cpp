@@ -1,4 +1,6 @@
 /// suffix_array ==> my code
+// get Number of different substrings in O(n log(n)) ==> ((n*n)+n)/2 - SumAll(lcp)
+
 void init_suffix_array(vector<int> &p, vector<int> &group, string &s) {
     int n = s.size();
     p.resize(n, 0);
@@ -73,6 +75,15 @@ vector<int> LCP(vector<int> &p, string &s) {
     return lcp;
 }
  
+// Comparing two substrings of a string in O(1)
+// note you must edit the suffex code to save all groups then build log_ array
+int compare(int i, int j, int len) {
+    int k=log_[len];
+    pair<int, int> a = {group[k][i], group[k][(i+len-(1 << k))%n]};
+    pair<int, int> b = {group[k][j], group[k][(j+len-(1 << k))%n]};
+    return a == b ? 0 : a < b ? -1 : 1;
+}
+
 
 // LCP in different strings in o(n^2) without suffix_array
 // LCP between a.substr from i -> a.size()-1 and b.substr from j to b.size()-1
