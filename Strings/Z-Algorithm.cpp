@@ -1,4 +1,7 @@
 // Source: https://cp-algorithms.com/string/z-function.html#:~:text=The%20Z%2Dfunction%20for%20this,Note.
+//String compression:
+//A solution is: compute the Z-function of s, loop through all i such that i divides n. Stop at the first i such that i+z[i]=n. Then, the string s can be compressed to the length i.
+
 vector<int> z_function(string s) {
     int n = (int) s.size();
     vector<int> z(n);
