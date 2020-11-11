@@ -12,7 +12,7 @@ We will add the following in graph theory:
 9- Prim's algorithm O(n^2) (DONE - NEEDS VERIFICATION)
 + Prim O(m log(n)) (DONE)
 10- Kruskal's algorithm (with path compression + rank optimization) (DONE)
-11- Small to large trick (DONE)
+11- Small to large trick (DONE - Not verified)
 12- DSU (DONE)
 
 Flows:
