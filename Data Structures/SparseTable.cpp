@@ -1,4 +1,4 @@
-Source: https://cp-algorithms.com/data_structures/sparse-table.html
+//Source: https://cp-algorithms.com/data_structures/sparse-table.html
 
 // Range Sum Query:
 
