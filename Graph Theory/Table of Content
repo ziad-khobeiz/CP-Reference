@@ -1,7 +1,7 @@
 We will add the following in graph theory:
 
 1- Bellman Ford (with negative cylce detection) (DONE)
-+ detecting all the nodes that exist in at least one negative cycle whether it is reachable from the source or not. ()
++ detecting all the nodes that exist in at least one negative cycle whether it is reachable from the source or not. (DONE - Not verified)
 2- Floyd Warshall algorithm (DONE)
 3- Dijkstra O(n^2) and O(n + m * log(n)) (min priority queue) (DONE - NEEDS VERIFICATION)
 5- Topological sorting (DONE)
@@ -12,7 +12,7 @@ We will add the following in graph theory:
 9- Prim's algorithm O(n^2) (DONE - NEEDS VERIFICATION)
 + Prim O(m log(n)) (DONE)
 10- Kruskal's algorithm (with path compression + rank optimization) (DONE)
-11- Small to large trick ()
+11- Small to large trick (DONE)
 12- DSU (DONE)
 
 Flows:
