@@ -23,3 +23,15 @@ line getLine(const segment &seg){
     canonize(t);
     return t;
 }
+
+// Doubles:
+struct line {
+    double a, b, c;
+    line(const point &p, const point &q) {
+        a = p.Y - q.Y;
+        b = q.X - p.X;
+        c = -a * p.X - b * p.Y;
+        double z = sqrt(a * a + b * b);
+        a /= z, b /= z, c /= z;
+    }
+}
