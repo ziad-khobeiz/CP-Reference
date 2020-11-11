@@ -13,7 +13,9 @@ void propagate(int node, int l, int r){
     if(lazy[node] == 0) return;
     tree[node] = 1ll * lazy[node] * ((sum[r] - sum[l - 1] + mod) % mod) % mod;
     if(l != r){
-        lazy[node << 1] = lazy[node << 1 | 1] = lazy[node];
+        // Give lazy to children: Eg. lazy[node << 1] (= OR +=) lazy[node];
+        lazy[node << 1] += lazy[node];
+        lazy[node << 1 | 1] += lazy[node];
     }
     lazy[node] = 0;
 }
