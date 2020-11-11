@@ -16,6 +16,4 @@ pair<int,int> dfs(int node, int par)
     }
     ans=max(ans,mx[2]+mx[1]);
     return {ans,mx[2]};
- 
- 
 }
