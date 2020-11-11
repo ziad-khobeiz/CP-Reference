@@ -10,7 +10,7 @@ void init(int n) {
     edges.clear();
 }
 
-void billman() {
+void Bellman() {
  
     int x = -1;
  
