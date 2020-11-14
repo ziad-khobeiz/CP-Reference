@@ -136,21 +136,20 @@ bool isPointOnRay(point a, point b, point c) {	// not tested?
     return dcmp(dp(b-a, c-a), 0) == 1;
 }
 
-bool isPointOnSegment(point a, point b, point c) {
-	return isPointOnRay(a, b, c) && isPointOnRay(b, a, c);
-}
-
+// Is point c on segment ab?
 bool isPointOnSegment(point a, point b, point c) {
 	double acb = length(a-b), ac = length(a-c), cb = length(b-c);
 	return dcmp(acb-(ac+cb), 0) == 0;
 }
 
+bool isPointOnSegment(point a, point b, point c) {
+	return isPointOnRay(a, b, c) && isPointOnRay(b, a, c);
+}
 
 // Find distance from point P2 to the line P0P1
 double distToLine( point p0, point p1, point p2 ) {
 	return fabs(cp(p1-p0, p2-p0)/length(p0-p1)); // area = 0.5*b*h
 }
-
 
 // Distance from point p2 to segment p0-p1
 double distToSegment( point p0, point p1, point p2 ) {
@@ -164,19 +163,17 @@ double distToSegment( point p0, point p1, point p2 ) {
 
 ===========================================================================================
 
-segment intersection and ccw:
-
-
+// Segment Intersection and CCW:
 bool intersectSegments(point a, point b, point c, point d, point & intersect) {
   double d1 = cp(a - b, d - c), d2 = cp(a - c, d - c), d3 = cp(a - b, a - c);
   if (fabs(d1) < EPS)
-    return false;  // Parllel || identical
+    return false;  // Parllel || Identical (------.------)
 
   double t1 = d2 / d1, t2 = d3 / d1;
   intersect = a + (b - a) * t1;
 
   if (t1 < -EPS || t2 < -EPS || t2 > 1 + EPS)
-    return false;  //e.g ab is ray, cd is segment ... change to whatever
+    return false;  // CAUTION: e.g ab is ray, cd is segment ... change to whatever
   return true;
 }
 
@@ -237,16 +234,12 @@ int main() {
 =========================================================================================
 Circles: 
 
-
-
-
-
 // 2 points has infinite circles
 // Find circle passes with 3 points, some times, there is no circle! (in case colinear)
 // Draw two perpendicular lines and intersect them
 // may be see https://www.topcoder.com/community/data-science/data-science-tutorials/geometry-concepts-line-intersection-and-its-applications/
 pair<double, point> findCircle(point a, point b, point c) {
-	//create median, vector, its prependicular
+	//create median, vector, its prependicular	
 	point m1 = (b+a)*0.5, v1 = b-a, pv1 = point(v1.Y, -v1.X);
 	point m2 = (b+c)*0.5, v2 = b-c, pv2 = point(v2.Y, -v2.X);
 	point end1 = m1+pv1, end2 = m2+pv2, center;
