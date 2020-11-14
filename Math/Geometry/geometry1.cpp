@@ -24,7 +24,7 @@ typedef complex<double> point;
 
 point reflect(point p, point p0, point p1) {
     point z = p-p0, w = p1-p0;
-    return conj(z/w)*w + p0; // Refelect point p1 around p0p1
+    return conj(z/w)*w + p0; // Refelect point p around p0p1
 }
 
 double fixAngle(double A) {
@@ -38,11 +38,11 @@ double angleO(point a, point O, point b) {
   return acos( fixAngle ( dp(v1, v2) / length(v1) / length(v2) ) );
 }
 
-double getAng(point &a, point &b, point &c) // find angle abc, anticlock bc to ba
+double getAng(point &a, point &b, point &c) // find angle abc (clockwise angle from bc to ba)
 {
     double ang = angle( vec(b, c)) - angle( vec(b, a));
     if(dcmp(ang, 0) < 0)
-    	ang+=2*PI;
+        ang+=2*PI;
     return ang;
 }
 
@@ -77,8 +77,7 @@ int main() {
 	cout<<b*2.0<<"\n";	// (6,8)
 	cout<<b/2.0<<"\n";	// (1.5,2)
 
-
-    cout << fixed << std::setprecision(1);
+  	cout << fixed << std::setprecision(1);
 
 	complex<double> i = -1;
 	cout<<sqrt(i)<<"\n";		// (0,1)
@@ -90,22 +89,20 @@ int main() {
 	complex<double> i1 (0, -1);
 	cout<<exp(i1 * PI)<<"\n";	// (-1, 0)
 
+	std::cout << std::fixed << std::setprecision(1);
 
+	std::complex<double> z1 = 1i * 1i;     // imaginary unit squared
+	std::cout << "i * i = " << z1 << '\n';
 
-	 std::cout << std::fixed << std::setprecision(1);
+	std::complex<double> z2 = std::pow(1i, 2); // imaginary unit squared
+	std::cout << "pow(i, 2) = " << z2 << '\n';
 
-	 std::complex<double> z1 = 1i * 1i;     // imaginary unit squared
-	 std::cout << "i * i = " << z1 << '\n';
+	double PI = std::acos(-1);
+	std::complex<double> z3 = std::exp(1i * PI); // Euler's formula
+	std::cout << "exp(i * pi) = " << z3 << '\n';
 
-	 std::complex<double> z2 = std::pow(1i, 2); // imaginary unit squared
-	 std::cout << "pow(i, 2) = " << z2 << '\n';
-
-	 double PI = std::acos(-1);
-	 std::complex<double> z3 = std::exp(1i * PI); // Euler's formula
-	 std::cout << "exp(i * pi) = " << z3 << '\n';
-
-	 std::complex<double> z4 = 1. + 2i, z5 = 1. - 2i; // conjugates
-	 std::cout << "(1+2i)*(1-2i) = " << z4*z5 << '\n';
+	std::complex<double> z4 = 1. + 2i, z5 = 1. - 2i; // conjugates
+	std::cout << "(1+2i)*(1-2i) = " << z4*z5 << '\n';
 	 */
 
 	point a (10, 10);
@@ -122,7 +119,7 @@ int main() {
 }
 
 =====================================================
-lines:
+// Lines:
 
 bool isCollinear(point a, point b, point c) {	
 	return fabs( cp(b-a, c-a) ) < EPS;	
@@ -149,17 +146,13 @@ bool isPointOnSegment(point a, point b, point c) {
 }
 
 
-
-
-
+// Find distance from point P2 to the line P0P1
 double distToLine( point p0, point p1, point p2 ) {
 	return fabs(cp(p1-p0, p2-p0)/length(p0-p1)); // area = 0.5*b*h
 }
 
 
-
-
-//distance from point p2 to segment p0-p1
+// Distance from point p2 to segment p0-p1
 double distToSegment( point p0, point p1, point p2 ) {
 	double d1, d2;
 	point v1 = p1-p0, v2 = p2-p0;
