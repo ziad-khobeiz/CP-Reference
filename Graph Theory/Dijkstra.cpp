@@ -12,7 +12,7 @@ void Dijkstra(int s) {
     //                 <dist,node>
     priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> pq;
     fill(dist, dist + N, OO);
-    pq.push({s, 0});
+    pq.push({0, s});
     dist[s] = 0;
     while (pq.size()) {
         int node = pq.top().second;
