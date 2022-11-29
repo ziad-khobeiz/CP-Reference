@@ -19,7 +19,7 @@ bool cmp_x(pair<point, int> &a, pair<point, int> &b){
 }
 
 struct cmp_y{
-    bool operator () (const pair<point, int> &a, const pair<point, int> &b){
+    bool operator () (const pair<point, int> &a, const pair<point, int> &b) const{
         if(a.first.imag() != b.first.imag()) return a.first.imag() < b.first.imag();
         if(a.first.imag() != b.first.imag()) return a.first.imag() < b.first.imag();
         return a.second < b.second;
